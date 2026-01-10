@@ -1,5 +1,5 @@
 {
-  "name": "picobello",
+  "name": "@superruudje/picobello",
   "version": "0.1.0-beta.1",
   "description": "Picobello design system – reusable Vue 3 UI components",
   "license": "MIT",
@@ -8,10 +8,11 @@
   "type": "module",
 
   "files": [
-    "dist"
+    "dist/index.*",
+    "dist/picobello.css"
   ],
 
-  "main": "index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
 
@@ -20,8 +21,13 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./style.css": "./dist/picobello.css"
   },
+
+  "sideEffects": [
+    "*.css"
+  ],
 
   "scripts": {
     "build": "vue-tsc -p tsconfig.build.json && vite build",
