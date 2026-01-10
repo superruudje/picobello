@@ -1,21 +1,17 @@
 {
   "name": "@superruudje/picobello",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "Picobello design system – reusable Vue 3 UI components",
   "license": "MIT",
   "author": "Rudi Haamke <rjhaamke@gmail.com>",
-
   "type": "module",
-
   "files": [
     "dist/index.*",
     "dist/picobello.css"
   ],
-
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -24,18 +20,15 @@
     },
     "./style.css": "./dist/picobello.css"
   },
-
   "sideEffects": [
     "*.css"
   ],
-
   "scripts": {
     "build": "vue-tsc -p tsconfig.build.json && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish:beta": "npm publish --tag beta"
   },
-
   "keywords": [
     "vue",
     "vue3",
@@ -44,16 +37,13 @@
     "components",
     "storybook"
   ],
-
   "peerDependencies": {
     "vue": "^3.3.0"
   },
-
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
     "vue": "^3.5.26"
   },
-
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
     "@storybook/addon-a11y": "^10.1.11",
