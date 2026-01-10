@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  background-color: var(--container-background);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+
+  .card__title {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+  }
+
+  .card__collapse-toggle i {
+    transition: transform .15s ease-in-out;
+  }
+
+  .card__collapse-toggle i.is-collapsed {
+    transform: rotate(-180deg);
+  }
+}
+
+.card__body {
+  padding: 0;
+  &.with-header {
+    margin-top: .75rem;
+    border-top: 1px solid var(--border);
+  }
+}
+
+.card__footer {
+  border-top: 1px solid var(--border);
+  padding-top: .75rem;
+
+  .card__footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+  }
+}

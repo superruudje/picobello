@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+storybook-static/
+
+# Vite
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Storybook cache
+.cache/
+.sb/
+
+# Test output
+coverage/
+playwright-report/
+
+# Temporary files
+*.tmp
+*.swp
+*.log
+
+# Lockfiles (npm)
+yarn.lock
+pnpm-lock.yaml

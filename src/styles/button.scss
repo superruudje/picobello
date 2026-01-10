@@ -1,0 +1,117 @@
+.btn {
+  /* CSS vars */
+  --btn-background-color: var(--b500);
+  --btn-text-color: var(--text-color-primary);
+  --btn-border-color: rgba(0, 0, 0, 0.25);
+  --btn-background-color-hover: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+  var(--btn-background-color);
+  --btn-background-color-progress: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+  var(--btn-background-color);
+
+  /* base */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  width: auto;
+  max-width: 100%;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  padding: 0 0.75rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--btn-border-color);
+  background: var(--btn-background-color);
+  color: var(--btn-text-color);
+
+  cursor: pointer;
+  opacity: 1;
+  vertical-align: top;
+  text-decoration: none !important;
+  outline-offset: 1px;
+
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  line-height: 1.25rem;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.03), 0 1px 1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.1s ease-in-out;
+
+  /* variants */
+  &--primary {
+    --btn-background-color: var(--b500);
+  }
+
+  &--success {
+    --btn-background-color: #2b8272;
+  }
+
+  &--secondary {
+    --btn-background-color: #fff;
+  }
+
+  &--warning {
+    --btn-background-color: var(--background-color-warning);
+  }
+
+  &--danger {
+    --btn-background-color: var(--background-color-danger);
+  }
+
+  &--secondary {
+    --btn-border-color: rgba(0, 0, 0, 0.1);
+    --btn-text-color: var(--text-color-secondary);
+    --btn-background-color-hover: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--btn-background-color);
+  }
+
+  /* states */
+  &:active:not(.btn--disabled):not(:disabled),
+  &.active {
+    transform: scale(0.98);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: var(--btn-text-color);
+    text-decoration: none !important;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: var(--btn-border-color);
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--btn-border-color);
+  }
+
+  /* content */
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.btn--small {
+  height: 2rem;
+  min-width: 2rem;
+  padding: 0 0.5rem;
+}
+
+@media (hover: hover) {
+  .btn:active:not(.btn--disabled):not(:disabled),
+  .btn:hover:not(.btn--disabled):not(:disabled),
+  .btn.active {
+    background: var(--btn-background-color-hover);
+  }
+}

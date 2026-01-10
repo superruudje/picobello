@@ -1,0 +1,70 @@
+{
+  "name": "picobello",
+  "version": "0.1.0-beta.1",
+  "description": "Picobello design system – reusable Vue 3 UI components",
+  "license": "MIT",
+  "author": "Rudi Haamke <rjhaamke@gmail.com>",
+
+  "type": "module",
+
+  "files": [
+    "dist"
+  ],
+
+  "main": "index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+
+  "scripts": {
+    "build": "vue-tsc -p tsconfig.build.json && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "publish:beta": "npm publish --tag beta"
+  },
+
+  "keywords": [
+    "vue",
+    "vue3",
+    "design-system",
+    "ui",
+    "components",
+    "storybook"
+  ],
+
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "vue": "^3.5.26"
+  },
+
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.3",
+    "@storybook/addon-a11y": "^10.1.11",
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/addon-vitest": "^10.1.11",
+    "@storybook/vue3-vite": "^10.1.11",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vitest/browser-playwright": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.16",
+    "playwright": "^1.57.0",
+    "sass": "^1.97.2",
+    "storybook": "^10.1.11",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-tsconfig-paths": "^6.0.3",
+    "vitest": "^4.0.16",
+    "vue-tsc": "^3.2.2"
+  }
+}

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+    <style type="text/css">
+        g.spinner-outer {
+        animation: rotate 2s linear infinite;
+        transform-origin: 50% 50%;
+        }
+
+        @keyframes rotate {
+        to { transform: rotateZ(360deg)}
+        }
+
+        circle {
+        display: block;
+        fill: transparent;
+        stroke-width: 4px;
+        stroke: #E6EEF7;
+        }
+
+        circle.spinner-inner {
+        animation: spin 1.5s ease-in-out infinite both;
+        stroke: #3291F0;
+        stroke-linecap: round;
+        stroke-dasharray: 215;
+        transform-origin: 50% 50%;
+        }
+
+        @keyframes spin {
+        0%, 25% {
+        stroke-dashoffset: 210;
+        transform: rotate(0);
+        }
+        50%, 75% {
+        stroke-dashoffset: 55;
+        transform: rotate(45deg);
+        }
+        100% {
+        stroke-dashoffset: 210;
+        transform: rotate(360deg);
+        }
+        }
+
+        .logo-container {
+        animation: float 2s ease-in-out infinite alternate;
+        transform-origin: center;
+        }
+
+        @keyframes float {
+        to { transform: translate(40,40) translateY(-3px); }
+        }
+    </style>
+
+    <g class="logo-container" transform="translate(40, 40)">
+        <g transform="scale(1.2) translate(-17, -11)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.6799 3.10235C21.8055 -0.186896 27.9891 0.367995 31.494 4.33645C34.9979
+                  8.3039 34.499 14.1882 30.3745 17.4763L25.0703 21.7052C24.5091 22.1524 23.6703
+                  22.0832 23.1989 21.5495L22.3243 20.5592C21.8532 20.0257 21.9278 19.2277 22.4906
+                  18.7793L27.7907 14.5536C30.2302 12.6088 30.5261 9.12242 28.4457 6.76675C26.3649
+                  4.41041 22.7007 4.08226 20.2609 6.0274L11.0169 13.3971C10.4532 13.8464 9.61603
+                  13.7772 9.14388 13.2428L8.26927 12.2523C7.79836 11.719 7.87229 10.9214 8.43469
+                  10.4731L17.6799 3.10235ZM8.75677 0.294978C9.31792 -0.152436 10.1567 -0.0832017
+                  10.6282 0.450462L11.5028 1.44097C11.974 1.9743 11.8992 2.77244 11.3366 3.22086L6.0363
+                  7.44637C3.59685 9.39135 3.30094 12.8777 5.38136 15.2333C7.46231 17.5895 11.1265
+                  17.9178 13.5663 15.9727L22.8103 8.60298C23.374 8.15355 24.211 8.22278 24.6831
+                  8.75729L25.5578 9.74763C26.0287 10.281 25.9547 11.0786 25.3925 11.5268L16.1471
+                  18.8977C12.0215 22.1868 5.8379 21.6321 2.33307 17.6635C-1.17088 13.696 -0.671964
+                  7.81192 3.45253 4.52369L8.75677 0.294978Z"
+                  fill="#0073E6"/>
+        </g>
+    </g>
+
+    <circle class="circle" cx="40" cy="40" r="34"/>
+    <g class="spinner-outer">
+        <circle class="spinner-inner" cx="40" cy="40" r="34"/>
+    </g>
+</svg>
