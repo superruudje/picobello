@@ -1,45 +1,45 @@
-import type {Meta, StoryObj} from "@storybook/vue3";
-import {Card} from "./index.ts";
-import {Button} from "@/components/Button";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import { Card } from "./index.ts";
+import { Button } from "@/components/Button";
 
 const meta: Meta<typeof Card> = {
-    title: "Components/Card",
-    component: Card,
-    tags: ['autodocs']
-}
+  title: "Components/Card",
+  component: Card,
+  tags: ["autodocs"],
+};
 
 export default meta;
 type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
-    args: {
-        title: 'MyCard'
+  args: {
+    title: "MyCard",
+  },
+  render: (args) => ({
+    components: { Card },
+    setup() {
+      return { args };
     },
-    render: (args) => ({
-        components: { Card },
-        setup() {
-            return { args };
-        },
-        template: `
+    template: `
             <Card v-bind="args">
                 <template #card-body>
                     <p>Lorem ipsum...</p>
                 </template>
             </Card>
         `,
-    }),
+  }),
 };
 
 export const CardWithFooter: Story = {
-    args: {
-        title: "Card with footer",
+  args: {
+    title: "Card with footer",
+  },
+  render: (args) => ({
+    components: { Card, Button },
+    setup() {
+      return { args };
     },
-    render: (args) => ({
-        components: { Card, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+    template: `
             <Card v-bind="args">
                 <template #card-body>
                     <p>Lorem ipsum...</p>
@@ -50,36 +50,36 @@ export const CardWithFooter: Story = {
                 </template>
             </Card>
         `,
-    }),
+  }),
 };
 
 export const CardWithoutHeader: Story = {
-    args: {},
-    render: (args) => ({
-        components: { Card, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+  args: {},
+  render: (args) => ({
+    components: { Card, Button },
+    setup() {
+      return { args };
+    },
+    template: `
             <Card v-bind="args">
                 <template #card-body>
                     <p>Lorem ipsum...</p>
                 </template>
             </Card>
         `,
-    }),
+  }),
 };
 
 export const CardWithActionButtons: Story = {
-    args: {
-        title: "Card with action buttons",
+  args: {
+    title: "Card with action buttons",
+  },
+  render: (args) => ({
+    components: { Card, Button },
+    setup() {
+      return { args };
     },
-    render: (args) => ({
-        components: { Card, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+    template: `
             <Card v-bind="args">
                 <template #header-buttons>
                     <Button size="small" variant="success" label="Voeg toe">
@@ -98,19 +98,19 @@ export const CardWithActionButtons: Story = {
                 </template>
             </Card>
         `,
-    }),
+  }),
 };
 
 export const CardWithIconAndFooter: Story = {
-    args: {
-        title: "Card with icon and footer",
+  args: {
+    title: "Card with icon and footer",
+  },
+  render: (args) => ({
+    components: { Card, Button },
+    setup() {
+      return { args };
     },
-    render: (args) => ({
-        components: { Card, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+    template: `
             <Card v-bind="args">
                 <template #header-icon>
                     <i class="bi bi-person"></i>
@@ -124,21 +124,21 @@ export const CardWithIconAndFooter: Story = {
                 </template>
             </Card>
         `,
-    }),
+  }),
 };
 
 export const CardWithCollapse: Story = {
-    args: {
-        title: "Card with collapse",
-        collapsible: true,
-        defaultCollapsed: true
+  args: {
+    title: "Card with collapse",
+    collapsible: true,
+    defaultCollapsed: true,
+  },
+  render: (args) => ({
+    components: { Card, Button },
+    setup() {
+      return { args };
     },
-    render: (args) => ({
-        components: { Card, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+    template: `
             <Card v-bind="args">
                 <template #card-body>
                     <p>Lorem ipsum...</p>
@@ -149,5 +149,5 @@ export const CardWithCollapse: Story = {
                 </template>
             </Card>
         `,
-    }),
+  }),
 };

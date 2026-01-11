@@ -18,6 +18,7 @@ npm install @rudihaamke/picobello@beta
 ## Usage
 
 ### Import styles (required)
+
 Import the global styles once in your app entry:
 
 ```ts
@@ -26,6 +27,7 @@ import "@rudihaamke/picobello/dist/style.css";
 ```
 
 ### Use components
+
 ```vue
 <script setup lang="ts">
 import { Button, Heading, Flex } from "@rudihaamke/picobello";

@@ -3,10 +3,10 @@
   --btn-background-color: var(--b500);
   --btn-text-color: var(--text-color-primary);
   --btn-border-color: rgba(0, 0, 0, 0.25);
-  --btn-background-color-hover: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-  var(--btn-background-color);
-  --btn-background-color-progress: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
-  var(--btn-background-color);
+  --btn-background-color-hover:
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), var(--btn-background-color);
+  --btn-background-color-progress:
+    linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), var(--btn-background-color);
 
   /* base */
   position: relative;
@@ -36,7 +36,9 @@
   -webkit-touch-callout: none;
 
   line-height: 1.25rem;
-  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.03), 0 1px 1px rgba(0, 0, 0, 0.03);
+  box-shadow:
+    0 2px 4px -2px rgba(0, 0, 0, 0.03),
+    0 1px 1px rgba(0, 0, 0, 0.03);
   transition: transform 0.1s ease-in-out;
 
   /* variants */
@@ -63,7 +65,8 @@
   &--secondary {
     --btn-border-color: rgba(0, 0, 0, 0.1);
     --btn-text-color: var(--text-color-secondary);
-    --btn-background-color-hover: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--btn-background-color);
+    --btn-background-color-hover:
+      linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--btn-background-color);
   }
 
   /* states */

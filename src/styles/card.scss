@@ -2,7 +2,7 @@
   position: relative;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   background-color: var(--container-background);
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 
   .card__title {
@@ -24,7 +24,7 @@
   }
 
   .card__collapse-toggle i {
-    transition: transform .15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
   }
 
   .card__collapse-toggle i.is-collapsed {
@@ -35,19 +35,19 @@
 .card__body {
   padding: 0;
   &.with-header {
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     border-top: 1px solid var(--border);
   }
 }
 
 .card__footer {
   border-top: 1px solid var(--border);
-  padding-top: .75rem;
+  padding-top: 0.75rem;
 
   .card__footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 }

@@ -83,7 +83,7 @@
   --active-text-color: #0057ad;
   --active-border-color: #0073e6;
 
-  --border: rgba(0, 0, 0, .1);
+  --border: rgba(0, 0, 0, 0.1);
   --branding-logo: #0073e6;
   --link: var(--b500);
   --error: var(--r500);
@@ -114,12 +114,12 @@
   --background-color-form: var(--n0);
   --background-color-form-hover: var(--n50);
   --background-color-transparent: var(--transparent);
-  --background-color-transparent-hover: rgba(255, 255, 255, .1);
+  --background-color-transparent-hover: rgba(255, 255, 255, 0.1);
   --background-color-inline: var(--transparent);
   --background-color-inline-hover: var(--transparent);
   --background-color-mark: var(--b100);
   --background-color-feature-icon: var(--b500);
-  --background-color-opaque: rgba(255, 255, 255, .1);
+  --background-color-opaque: rgba(255, 255, 255, 0.1);
 
   --alert-background-info: var(--n500);
   --alert-background-success: var(--g500);
@@ -175,11 +175,11 @@
   --input-radius: 8px;
   --focus-outline-color: #cce6ff;
 
-  --elevation-overlay: 0 0 20px rgba(44, 44, 46, .25);
+  --elevation-overlay: 0 0 20px rgba(44, 44, 46, 0.25);
 
   --text-color-feature: #2c2c2e;
 
   --shadow-color-rgb: var(--n800-rgb);
-  --shadow-border: rgba(var(--n400-rgb), .25);
-  --shadow-border-hover: rgba(var(--n400-rgb), .3);
+  --shadow-border: rgba(var(--n400-rgb), 0.25);
+  --shadow-border-hover: rgba(var(--n400-rgb), 0.3);
 }
