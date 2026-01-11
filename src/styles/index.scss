@@ -1,10 +1,11 @@
 @use "./tokens";
+
+@use "./alert";
 @use "./button";
 @use "./card";
-@use "./alert";
-@use "./navigation-card";
-@use "./loader";
-@use "./heading";
 @use "./flex";
+@use "./heading";
+@use "./loader";
+@use "./navigation-card";
 
 @import "bootstrap-icons/font/bootstrap-icons.css";
