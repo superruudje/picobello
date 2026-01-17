@@ -1,0 +1,67 @@
+.input-wrapper {
+  max-width: 100%;
+
+  &--xs {
+    width: 60px;
+  }
+
+  &--s {
+    width: 80px;
+  }
+
+  &--m {
+    width: 120px;
+  }
+
+  &--l {
+    width: 180px;
+  }
+
+  &--xl {
+    width: 240px;
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  outline: none;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  background: #fff;
+  background-clip: padding-box;
+  color: var(--primary-text);
+  text-overflow: ellipsis;
+
+  &--large {
+    height: 2.5rem;
+    padding: 0 .75rem;
+  }
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    outline: none;
+  }
+
+  &--invalid {
+    border-color: rgba(220, 53, 69, 0.65);
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+    }
+  }
+
+  &--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
